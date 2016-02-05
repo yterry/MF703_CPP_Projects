@@ -1,0 +1,18 @@
+class DeckOfCards:
+
+public:
+DeckOfCards();
+shuffle();
+
+*deal(int numberOfPlayers); 
+//for Texas Hold'em, need to change deal() for multiple players.
+
+showHand();
+sortHand();
+rankHand();
+showHandRank();
+
+private:
+int deck[4][13];
+int hand[7][2];
+//every table card is included, and when do rank, do 7 choose 5 and pick best 5

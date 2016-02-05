@@ -1,0 +1,30 @@
+class order book
+{
+private:
+	map<double, vector<order>, greater<>> Bid;
+	map<double, vector<order>, less<>> Ask;
+	//can have another map with key prices to values sum of quantities
+	//then we can check if the total quantity is smaller than order and execute all rather than call match many times
+public:
+	void match(order);
+	void insert(order);
+	execute();//execute order, and send an message to the console
+}
+
+class order
+{
+private:
+	double price;
+	double quantity;
+	string side;
+	string ticker;
+	string type;
+	
+public:
+	
+}
+
+class message
+{
+	
+}

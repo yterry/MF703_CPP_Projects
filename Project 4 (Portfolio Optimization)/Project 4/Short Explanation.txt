@@ -1,0 +1,23 @@
+Overall:
+
+We used linear algebra library armadillo. To install this library, we did:
+1. add directory "\include" to VC++ Directories/Include Directories & Library Directories
+2. add the same directory to Additional Include Directories
+3. add the directory "\lib_win64" to Linker/General/Additional Library Directories
+4. add blas_win64_MT.lib;lapack_win64_MT.lib to Linker/Input/Additional Dependencies
+5. change Active Solution Platform to x64
+
+Inputs & Outputs:
+
+Project 4.1/Mean Variance
+
+Input: Daily assets prices. Read from file "stock prices.csv", can be any amount of data/assets.
+
+Output: Given investor's expected return, compute weights using mean variance model. In this case, we are using daily data, and the three companies all have negative mean return, thus the output weights given 0.01 expected return (which is rather big) can be positive big for some assets and negative big for some assets.
+
+Project 4.2/Black Litterman
+
+Input: Daily assets prices; P matrix (views matrix); Q matrix (views of excess returns matrix). Read from file "stock prices.csv","P.csv","Q.csv". Can be any amount of data/assets.
+
+Output: Optimal portfolio weights given investor's views to maximize investor's utility function. In this case, daily data is used, and we assume initial market equilibrium is equal weights, thus investor's view is going to alter the weights by a moderate but not too big amount.
+
